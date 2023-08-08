@@ -1,4 +1,4 @@
-# User Stories
+# Features
 
 - [x] setup mysql docker
 - [x] drizzle push schema to db
@@ -12,11 +12,17 @@
 - [ ] node 20 support
 - [ ] alias support in node 20
 - [ ] i18n
+- [ ] deploy with github actions
 
 ## compatibility 
-NODE 18
+- [x] NODE 18
+- [ ] NODE 20 incompatible using imports 
 
-NODE 20 incompatible using imports 
+
+## Drizzle push schema 
+```
+npx drizzle-kit push:mysql
+```
 
 ### start mysql docker
 build
@@ -29,10 +35,10 @@ docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -e MYSQ
 
 
 ### issues
-Can't make work
+Can't make work with this requirements
 - node 20
 - using import instead of require
 - package.json imports (aliases)
 - top level await
 
-using loader.js?
+using loader.js? how to handle imports aliases (package.json)
